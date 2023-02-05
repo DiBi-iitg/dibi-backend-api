@@ -58,7 +58,7 @@ const CreateNewTxn = async (req, res, next) => {
 	});
 	SendWhatsAppMessage(
 		WhatsAppClient,
-		"6003224398",
+		"",
 		`
 	New Transaction
 	Invoice Number ${newTxn.invoiceNumber}

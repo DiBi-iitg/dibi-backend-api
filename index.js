@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 dotenv.config();
 
 import WhatsappClient from "./services/whatsapp/client.js";
-// WhatsappClient.initialize();
+WhatsappClient.initialize();
 
 import userRoutes from "./modules/auth/routes.js";
 import txnRoutes from "./modules/transaction/routes.js";
