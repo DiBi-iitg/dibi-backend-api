@@ -8,7 +8,7 @@ const GenerateOTP = async (userId, userEmail) => {
 	if (existingOTP) {
 		await OTP.deleteMany({ userId: userId });
 	}
-	var otp = Math.floor(1000 + Math.random() * 9000);
+	var otp = Math.floor(100000 + Math.random() * 9000);
 	const newOTP = await OTP.create({
 		otp: otp,
 		userId: userId,
