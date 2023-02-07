@@ -44,6 +44,7 @@ const CreateNewTxn = async (req, res, next) => {
 		consumerDetail: Joi.string().required(),
 		txns: Joi.array().items(txnSchema).required(),
 		totalAmount: Joi.string().required(),
+		receiptLink: Joi.string().required(),
 	};
 
 	const data = req.body;
@@ -58,7 +59,7 @@ const CreateNewTxn = async (req, res, next) => {
 	});
 	SendWhatsAppMessage(
 		WhatsAppClient,
-		"",
+		"6003224398",
 		`
 	New Transaction
 	Invoice Number ${newTxn.invoiceNumber}
@@ -66,7 +67,8 @@ const CreateNewTxn = async (req, res, next) => {
 	Total Amount ${newTxn.totalAmount}
 	Thanks!
 	DiBi Bot
-	`
+	`,
+		data.receiptLink
 	);
 	return res.json(newTxn);
 };
