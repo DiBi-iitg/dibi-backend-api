@@ -8,7 +8,7 @@ import TxnServices from "./services.js";
 import WhatsAppClient from "../../services/whatsapp/client.js";
 import SendWhatsAppMessage from "../../services/whatsapp/sendMessage.js";
 
-const categories = ["electronics", "grocery", "raw material", "accessories", "service"];
+const categories = ["electronics", "grocery", "raw material", "accessories"];
 const getRandomCategory = () => categories[Math.floor(Math.random() * categories.length)];
 
 const GetAllTxns = async (req, res, next) => {
