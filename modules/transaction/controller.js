@@ -58,18 +58,18 @@ const CreateNewTxn = async (req, res, next) => {
 		category: getRandomCategory(),
 	});
 	SendWhatsAppMessage(
-		WhatsAppClient,
-		"6003224398",
-		`
+    WhatsAppClient,
+    "7783839912",
+    `
 	New Transaction
-	Invoice Number ${newTxn.invoiceNumber}
+	Invoice Number ${`JX788&809`}
 	Seller ID ${newTxn.vendorId}
 	Total Amount ${newTxn.totalAmount}
 	Thanks!
 	DiBi Bot
 	`,
-		data.receiptLink
-	);
+    data.receiptLink
+  );
 	return res.json(newTxn);
 };
 
